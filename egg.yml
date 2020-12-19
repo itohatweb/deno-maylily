@@ -9,6 +9,7 @@ releaseType: minor
 files:
   - ./mod.ts
   - ./src/**/*
+  - ./test/**/*
   - ./README.md
   - ./LICENSE
 ignore:
