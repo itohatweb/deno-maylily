@@ -1,10 +1,12 @@
 name: deno-maylily
 entry: ./mod.ts
-description: A copy of Maylily a distributable, serverless, and customizable unique ID generator based on Snowflake
-homepage: C:\ITOH\Projects\GitHub\itohatweb\deno-maylily
+description: >-
+  A copy of Maylily a distributable, serverless, and customizable unique ID
+  generator based on Snowflake
+homepage: 'https://github.com/itohatweb/deno-maylily'
 unstable: false
 unlisted: false
-version: 1.0.0
+version: 1.1.0
 releaseType: minor
 files:
   - ./mod.ts
@@ -17,4 +19,4 @@ ignore:
 checkFormat: deno fmt
 checkTests: deno test
 checkInstallation: true
-check: false
+check: true
