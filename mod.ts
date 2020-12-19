@@ -84,7 +84,7 @@ function errorTimeBackwards(time: number) {
   return new Error(message);
 }
 
-export { maylily };
+export default maylily;
 
 interface MaylilyOptions {
   radix?: number;
