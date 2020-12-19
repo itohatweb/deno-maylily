@@ -21,7 +21,7 @@ Import with `nest.land`.
 ```typescript
 import maylily from "https://x.nest.land/deno-maylily@1.0.0/mod.ts";
 ```
-Or import with `deno.land`
+Or use `deno.land`.
 ```typescript
 import maylily from  "https://deno.land/x/deno-maylily@1.0.0/mod.ts";
 ```
