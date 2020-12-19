@@ -12,7 +12,6 @@ A copy of [Maylily](https://github.com/shimataro/maylily/) a distributable, serv
 * customizable
 * supports 2-36 radix
 * supports multiple precision integer
-* supports CommonJS, ES Modules, TypeScript
 
 ## How to import
 
