@@ -39,7 +39,10 @@ function maylily(options?: MaylilyOptions) {
 /**
  * generate and resolve ID
  */
-function resolveId(resolve: any, reject: any) {
+function resolveId(
+  resolve: (value: unknown) => void,
+  reject: (reason?: any) => void,
+) {
   const time = Date.now();
   if (time < timePrev) {
     reject(errorTimeBackwards(time));
@@ -65,14 +68,14 @@ function resolveId(resolve: any, reject: any) {
 /**
  * build unique ID
  */
-function buildId(time: number, options: any) {
+function buildId(time: number, options: MaylilyOptions) {
   timePrev = time;
 
-  return BigInteger(time - options.timeBase)
-    .shiftLeft(options.machineBits).add(options.machineId)
-    .shiftLeft(options.generatorBits).add(options.generatorId)
-    .shiftLeft(options.sequenceBits).add(sequence++)
-    .toString(options.radix);
+  return BigInteger(time - options.timeBase!)
+    .shiftLeft(options.machineBits!).add(options.machineId!)
+    .shiftLeft(options.generatorBits!).add(options.generatorId!)
+    .shiftLeft(options.sequenceBits!).add(sequence++)
+    .toString(options.radix!);
 }
 
 /**
