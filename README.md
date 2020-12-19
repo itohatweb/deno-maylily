@@ -15,12 +15,12 @@ A copy of [Maylily](https://github.com/shimataro/maylily/) a distributable, serv
 
 ## How to import
 
-Import with `nest.land`.
+Import with `nest.land`:
 
 ```typescript
 import maylily from "https://x.nest.land/deno-maylily@1.0.0/mod.ts";
 ```
-Or use `deno.land`.
+Or use `deno.land`:
 ```typescript
 import maylily from  "https://deno.land/x/deno-maylily@1.0.0/mod.ts";
 ```
