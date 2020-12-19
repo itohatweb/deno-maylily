@@ -22,7 +22,7 @@ import maylily from "https://x.nest.land/deno-maylily@1.0.0/mod.ts";
 ```
 Or use `deno.land`:
 ```typescript
-import maylily from  "https://deno.land/x/deno-maylily@1.0.0/mod.ts";
+import maylily from  "https://deno.land/x/deno_maylily@1.0.0/mod.ts";
 ```
 
 ## How to use
