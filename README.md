@@ -1,8 +1,6 @@
 
 # Deno MayLily
 
-[![Release][image-release]][link-release]
-[![License][image-license]][link-license]
 [![nest.land](https://nest.land/badge.svg)](https://nest.land/package/deno-maylily)
 
 A copy of Maylily a distributable, serverless, and customizable unique ID generator based on [Snowflake](https://github.com/twitter/snowflake/tree/snowflake-2010/). Made compatible with deno
