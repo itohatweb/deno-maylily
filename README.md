@@ -47,7 +47,7 @@ try {
 | name | description | default |
 |------|-------------|---------|
 | `radix` | radix of generated ID (2-36) | 10 |
-| `timeBase` | base time in unixtime(millisec) | 946684800000 (2000-01-01T00:00:00Z) |
+| `timeBase` | base time in unixtime (millisec) | 946684800000 (2000-01-01T00:00:00Z) |
 | `machineId` | identifier of machine; must be unique in service | 0 |
 | `machineBits` | required bits to represent machineId | 3 |
 | `generatorId` | identifier of generator; must be unique in machine | process ID |
