@@ -4,7 +4,7 @@
 [![nest.land](https://nest.land/badge.svg)](https://nest.land/package/deno-maylily)
 [![doc.deno.land](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/deno_maylily/mod.ts)
 
-A copy of [Maylily](https://github.com/shimataro/maylily/) a distributable, serverless, and customizable unique ID generator based on [Snowflake](https://github.com/twitter/snowflake/tree/snowflake-2010/). Made compatible with deno
+A changed copy of [Maylily](https://github.com/shimataro/maylily/) a distributable, serverless, and customizable unique ID generator based on [Snowflake](https://github.com/twitter/snowflake/tree/snowflake-2010/). Made compatible with deno
 
 ## Features
 
