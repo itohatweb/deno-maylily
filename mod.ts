@@ -26,7 +26,7 @@ let sequence = 0;
  * Generate an unique ID.
  * All options are optional for all not given options the default will be used.
  */
-export function maylily(options?: MaylilyOptions) {
+export function maylily(options?: MaylilyOptions): Promise<string> {
   // Merge options if specified.
   if (options !== undefined) {
     Object.assign(maylilyGlobalOptions, options);
@@ -41,7 +41,7 @@ export function maylily(options?: MaylilyOptions) {
  * generate and resolve ID
  */
 function resolveId(
-  resolve: (value: unknown) => void,
+  resolve: (value: string) => void,
   reject: (reason?: any) => void,
 ) {
   const time = Date.now();
