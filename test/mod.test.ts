@@ -2,7 +2,7 @@ import {
   assertEquals,
   assertThrowsAsync,
 } from "https://deno.land/std@0.81.0/testing/asserts.ts";
-import maylily from "../mod.ts";
+import { maylily } from "../mod.ts";
 
 /**
  * mock Date.now()
