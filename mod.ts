@@ -9,7 +9,7 @@ const DEFAULT_BITS_MACHINE = 3; // up to 8 machines
 const DEFAULT_BITS_GENERATOR = 10; // 0-1023
 const DEFAULT_BITS_SEQUENCE = 8; // 0-255
 
-const optionsGlobal = {
+const maylilyGlobalOptions = {
   radix: 10,
   timeBase: Date.parse("2000-01-01T00:00:00Z"),
   machineId: 0,
@@ -23,12 +23,13 @@ let timePrev = 0;
 let sequence = 0;
 
 /**
- * unique ID generator
+ * Generate an unique ID.
+ * All options are optional for all not given options the default will be used.
  */
-function maylily(options?: MaylilyOptions) {
+export function maylily(options?: MaylilyOptions) {
   // Merge options if specified.
   if (options !== undefined) {
-    Object.assign(optionsGlobal, options);
+    Object.assign(maylilyGlobalOptions, options);
   }
 
   return new Promise((resolve, reject) => {
@@ -54,10 +55,10 @@ function resolveId(
     sequence = 0;
   }
 
-  const sequenceLimit = 1 << optionsGlobal.sequenceBits;
+  const sequenceLimit = 1 << maylilyGlobalOptions.sequenceBits;
   if (sequence < sequenceLimit) {
     // Increment sequence when sequence DOESN'T reach to limit.
-    resolve(buildId(time, optionsGlobal));
+    resolve(buildId(time, maylilyGlobalOptions));
     return;
   }
 
@@ -66,7 +67,7 @@ function resolveId(
 }
 
 /**
- * build unique ID
+ * build an unique ID 
  */
 function buildId(time: number, options: MaylilyOptions) {
   timePrev = time;
@@ -79,7 +80,7 @@ function buildId(time: number, options: MaylilyOptions) {
 }
 
 /**
- * generate error instance for time error
+ * generate an error instance for time backwards error
  */
 function errorTimeBackwards(time: number) {
   const message =
@@ -87,9 +88,7 @@ function errorTimeBackwards(time: number) {
   return new Error(message);
 }
 
-export default maylily;
-
-interface MaylilyOptions {
+export interface MaylilyOptions {
   radix?: number;
   timeBase?: number;
   machineId?: number;
