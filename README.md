@@ -18,11 +18,11 @@ A copy of [Maylily](https://github.com/shimataro/maylily/) a distributable, serv
 Import with `nest.land`:
 
 ```typescript
-import { maylily } from "https://x.nest.land/deno-maylily@1.1.3/mod.ts";
+import { maylily } from "https://x.nest.land/deno-maylily@2.0.0/mod.ts";
 ```
 Or use `deno.land`:
 ```typescript
-import { maylily } from  "https://deno.land/x/deno_maylily@1.1.3/mod.ts";
+import { maylily } from  "https://deno.land/x/deno_maylily@2.0.0/mod.ts";
 ```
 
 ## How to use
@@ -31,7 +31,7 @@ No external servers needed.
 Just import and call `maylily()`!
 
 ```typescript
-import { maylily } from "https://x.nest.land/deno-maylily@1.1.3/mod.ts";
+import { maylily } from "https://x.nest.land/deno-maylily@2.0.0/mod.ts";
 
 try {
   const id = await maylily();
