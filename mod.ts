@@ -89,11 +89,18 @@ function errorTimeBackwards(time: number) {
 }
 
 export interface MaylilyOptions {
+  /** radix of generated ID (2-36) */
   radix?: number;
+  /** base time in unixtime (millisec) */
   timeBase?: number;
+  /** identifier of machine; must be unique in service */
   machineId?: number;
+  /** required bits to represent machineId */
   machineBits?: number;
+  /** identifier of generator; must be unique in machine */
   generatorId?: number;
+  /** required bits to represent generatorId */
   generatorBits?: number;
+  /** required bits to represent sequence */
   sequenceBits?: number;
 }
