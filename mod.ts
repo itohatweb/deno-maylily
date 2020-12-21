@@ -69,7 +69,7 @@ function resolveId(
 /**
  * build an unique ID 
  */
-function buildId(time: number, options: MaylilyOptions) {
+function buildId(time: number, options: MaylilyOptions): string {
   timePrev = time;
 
   return BigInteger(time - options.timeBase!)
