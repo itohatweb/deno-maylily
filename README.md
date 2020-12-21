@@ -85,6 +85,3 @@ See [CHANGELOG.md][link-changelog]
 [image-release]: https://img.shields.io/github/v/release/itohatweb/deno-maylily.svg
 
 [link-changelog]: ./CHANGELOG.md
-
-[![LICENSE][image-license]][link-license]
-[![RELEASE][image-releases]][link-release]
