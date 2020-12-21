@@ -29,6 +29,12 @@ let sequence = 0;
 export function maylily(options?: MaylilyOptions): Promise<string> {
   // Merge options if specified.
   if (options !== undefined) {
+    // if generatorBits were changed but not the generatorId we may change the generatorId automatically
+    if (
+      options.generatorBits !== undefined && options.generatorId === undefined
+    ) {
+      options.generatorId = Deno.pid % (1 << options.generatorBits);
+    }
     Object.assign(maylilyGlobalOptions, options);
   }
 
