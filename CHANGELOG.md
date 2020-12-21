@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * changelog
 * jsdoc the MaylilyOptions interface
 * explicit return types since unexplicit were not correct
+* more badges to readme
 
 ### Changed
 * Description of deno_maylily
