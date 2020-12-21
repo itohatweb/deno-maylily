@@ -1,4 +1,3 @@
-
 # Deno MayLily
 
 [![nest.land](https://nest.land/badge.svg)](https://nest.land/package/deno-maylily)
@@ -73,3 +72,6 @@ maylily({
   machineBits: 1                                  // if required number machines are up to 2, this is enough.
 });
 ```
+
+## Changelog
+See [CHANGELOG.md](CHANGELOG.md)
