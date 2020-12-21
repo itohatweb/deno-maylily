@@ -1,10 +1,11 @@
-
 # Deno MayLily
 
 [![nest.land](https://nest.land/badge.svg)](https://nest.land/package/deno-maylily)
 [![doc.deno.land](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/deno_maylily/mod.ts)
+[![RELEASE][image-release]][link-release]
+[![LICENSE][image-license]][link-license]
 
-A copy of [Maylily](https://github.com/shimataro/maylily/) a distributable, serverless, and customizable unique ID generator based on [Snowflake](https://github.com/twitter/snowflake/tree/snowflake-2010/). Made compatible with deno
+A changed copy of [Maylily](https://github.com/shimataro/maylily/) a distributable, serverless, and customizable unique ID generator based on [Snowflake](https://github.com/twitter/snowflake/tree/snowflake-2010/). Made compatible with deno.
 
 ## Features
 
@@ -47,7 +48,7 @@ try {
 | name | description | default |
 |------|-------------|---------|
 | `radix` | radix of generated ID (2-36) | 10 |
-| `timeBase` | base time in unixtime(millisec) | 946684800000 (2000-01-01T00:00:00Z) |
+| `timeBase` | base time in unixtime (millisec) | 946684800000 (2000-01-01T00:00:00Z) |
 | `machineId` | identifier of machine; must be unique in service | 0 |
 | `machineBits` | required bits to represent machineId | 3 |
 | `generatorId` | identifier of generator; must be unique in machine | process ID |
@@ -73,3 +74,14 @@ maylily({
   machineBits: 1                                  // if required number machines are up to 2, this is enough.
 });
 ```
+
+## Changelog
+See [CHANGELOG.md][link-changelog]
+
+[link-license]: ./LICENSE
+[image-license]: https://img.shields.io/github/license/itohatweb/deno-maylily.svg
+
+[link-release]: https://github.com/itohatweb/deno-maylily/releases
+[image-release]: https://img.shields.io/github/v/release/itohatweb/deno-maylily.svg
+
+[link-changelog]: ./CHANGELOG.md

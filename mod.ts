@@ -26,9 +26,15 @@ let sequence = 0;
  * Generate an unique ID.
  * All options are optional for all not given options the default will be used.
  */
-export function maylily(options?: MaylilyOptions) {
+export function maylily(options?: MaylilyOptions): Promise<string> {
   // Merge options if specified.
   if (options !== undefined) {
+    // if generatorBits were changed but not the generatorId we may change the generatorId automatically
+    if (
+      options.generatorBits !== undefined && options.generatorId === undefined
+    ) {
+      options.generatorId = Deno.pid % (1 << options.generatorBits);
+    }
     Object.assign(maylilyGlobalOptions, options);
   }
 
@@ -41,7 +47,7 @@ export function maylily(options?: MaylilyOptions) {
  * generate and resolve ID
  */
 function resolveId(
-  resolve: (value: unknown) => void,
+  resolve: (value: string) => void,
   reject: (reason?: any) => void,
 ) {
   const time = Date.now();
@@ -69,7 +75,7 @@ function resolveId(
 /**
  * build an unique ID 
  */
-function buildId(time: number, options: MaylilyOptions) {
+function buildId(time: number, options: MaylilyOptions): string {
   timePrev = time;
 
   return BigInteger(time - options.timeBase!)
@@ -89,11 +95,18 @@ function errorTimeBackwards(time: number) {
 }
 
 export interface MaylilyOptions {
+  /** radix of generated ID (2-36) */
   radix?: number;
+  /** base time in unixtime (millisec) */
   timeBase?: number;
+  /** identifier of machine; must be unique in service */
   machineId?: number;
+  /** required bits to represent machineId */
   machineBits?: number;
+  /** identifier of generator; must be unique in machine */
   generatorId?: number;
+  /** required bits to represent generatorId */
   generatorBits?: number;
+  /** required bits to represent sequence */
   sequenceBits?: number;
 }
