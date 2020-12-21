@@ -13,6 +13,7 @@ files:
   - ./src/**/*
   - ./test/**/*
   - ./README.md
+  - ./CHANGELOG.md
   - ./LICENSE
 ignore:
   - .git
