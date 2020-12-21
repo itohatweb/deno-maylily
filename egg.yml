@@ -7,7 +7,7 @@ description: >-
 homepage: 'https://github.com/itohatweb/deno-maylily'
 unstable: false
 unlisted: false
-version: 2.0.0
+version: 2.0.1
 files:
   - ./mod.ts
   - ./src/**/*
