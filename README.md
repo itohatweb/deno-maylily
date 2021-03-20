@@ -67,7 +67,7 @@ Generated value is stringified multiple precision integer (in specified radix).
 
 example:
 
-```javascript
+```typescript
 // keeps options until next change
 maylily({
   timeBase: Date.parse("2017-01-01T00:00:00Z"),   // if your service starts in 2017, this is enough.
