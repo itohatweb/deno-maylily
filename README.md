@@ -20,11 +20,11 @@ A changed copy of [Maylily](https://github.com/shimataro/maylily/) a distributab
 Import with `nest.land`:
 
 ```typescript
-import { maylily } from "https://x.nest.land/deno-maylily@2.0.1/mod.ts";
+import { maylily } from "https://x.nest.land/deno-maylily@3.0.0/mod.ts";
 ```
 Or use `deno.land`:
 ```typescript
-import { maylily } from  "https://deno.land/x/deno_maylily@2.0.1/mod.ts";
+import { maylily } from  "https://deno.land/x/deno_maylily@3.0.0/mod.ts";
 ```
 
 ## How to use
@@ -33,7 +33,7 @@ No external servers needed.
 Just import and call `maylily()`!
 
 ```typescript
-import { maylily } from "https://x.nest.land/deno-maylily@2.0.1/mod.ts";
+import { maylily } from "https://x.nest.land/deno-maylily@3.0.0/mod.ts";
 
 try {
   const id = await maylily();
