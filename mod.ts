@@ -2,9 +2,6 @@
 // Small parts were changed by itohatweb
 // Ported from https://github.com/shimataro/maylily
 
-// @deno-types="./src/bigInteger.d.ts"
-import BigInteger from "./src/bigInteger.js";
-
 const DEFAULT_BITS_MACHINE = 3; // up to 8 machines
 const DEFAULT_BITS_GENERATOR = 10; // 0-1023
 const DEFAULT_BITS_SEQUENCE = 8; // 0-255
@@ -78,10 +75,10 @@ function resolveId(
 function buildId(time: number, options: MaylilyOptions): string {
   timePrev = time;
 
-  return BigInteger(time - options.timeBase!)
-    .shiftLeft(options.machineBits!).add(options.machineId!)
-    .shiftLeft(options.generatorBits!).add(options.generatorId!)
-    .shiftLeft(options.sequenceBits!).add(sequence++)
+  return ((((((BigInt(time - options.timeBase!) <<
+    BigInt(options.machineBits!)) + BigInt(options.machineId!)) <<
+    BigInt(options.generatorBits!)) + BigInt(options.generatorId!)) <<
+    BigInt(options.sequenceBits!)) + BigInt(sequence++))
     .toString(options.radix!);
 }
 

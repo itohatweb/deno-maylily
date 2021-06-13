@@ -1,13 +1,12 @@
 name: deno-maylily
 entry: ./mod.ts
 description: >-
-  A changed copy of Maylily a distributable,
-  serverless, and customizable unique ID generator
-  based on Snowflake.
+  A changed copy of Maylily a distributable, serverless, and customizable unique
+  ID generator based on Snowflake.
 homepage: 'https://github.com/itohatweb/deno-maylily'
 unstable: false
 unlisted: false
-version: 2.0.1
+version: 3.0.0
 files:
   - ./mod.ts
   - ./src/**/*
